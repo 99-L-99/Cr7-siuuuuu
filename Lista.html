@@ -1,0 +1,20 @@
+<html>
+  <head>
+<title>Lista do sofrimento</title>
+<input id="Itens" type="text" placeholder = " Digita essa bomba aqui">
+<button Onclick="adicionar()">adicionar</button>
+<ul id="Lista" ></ul>
+
+<script>
+  function adicionar() {
+    const texto = Itens.value
+    
+    const li = document.createElement("li");
+    li.textContent = texto;
+
+    Lista.appendChild(li)
+    Itens.value = "";
+  }
+</script>
+</head>
+</html>

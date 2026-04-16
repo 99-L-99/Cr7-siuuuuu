@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Formulario da chape </title>
+        </head>
+<body>
+  
+    <form id="meuForm">
+    <input id="nome" type="text" placeholder="Nome">
+    <input id="email" type="email" placeholder="Email">
+    <button type="button" onclick="validar()">Enviar</button>
+    <div id="erro" style="color: red;"></div>
+  </form>
+
+          <script>
+    function validar() {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const erro = document.getElementById("erro");
+      
+      erro.innerHTML = "";
+      
+      if (nome.trim() === "" || email.trim() === "") {
+        erro.innerHTML = "Todos os campos são obrigatórios!";
+        return;
+      }
+      
+      if (!email.includes("@")) {
+        erro.innerHTML = "Email inválido!";
+        return;
+      }
+      
+      alert("Formulário enviado com sucesso!");
+    }
+  </script>
+    </script>
+  
+</body>
+</html>

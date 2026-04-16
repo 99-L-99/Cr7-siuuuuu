@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Exemplo</title>
+    <script>
+       const texto = document.getElementById("meuInput").value;
+    </script>
+  </head>
+  <body>
+    <h1>gremio maior do mundo </h1>
+    <p>Parágrafo.</p>
+    <input id="meuInput" type="text">
+const texto = document.getElementById("meuInput").value;
+  </body>
+</html>
+<html>
+  <head>
+    <title>Exemplo</title>
+    <script>
+      function processar() {
+  const valor = document.getElementById("meuInput").value;
+  document.getElementById("resultado").innerHTML = valor;
+}
+    </script>
+  </head>
+  <body>
+    <h1>Título</h1>
+    <p>Parágrafo.</p>
+   <button id="meuBotao" onclick="processar()">Clique Aqui</button>
+  </body>
+</html>
+<html>
+  <head>
+    <title>Exemplo</title>
+    <script>
+document.getElementById("resultado").innerHTML = 
+  "Olá " + document.getElementById("meuInput").value + "!";
+    </script>
+  </head>
+  <body>
+    <h1>Título</h1>
+    <p>Parágrafo.</p>
+    <div id="resultado">O resultado aparecerá aqui</div>
+  </body>
+</html>

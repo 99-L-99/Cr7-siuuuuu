@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validassão de Formulário</title>
+</head>
+<body>
+  
+   <form id="meuForm">
+    <input id="nome" type="text" placeholder="Nome">
+    <input id="email" type="email" placeholder="Email">
+    <input id="Senha" type="password" placeholder="Senha ultrasecreta">
+    <button type="button" onclick="Verificar()">Enviar</button>
+    <div id="Fumaciou" style="color: red;"></div>
+  </form>
+
+    <script>
+    function Verificar() {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const Senha = document.getElementById("Senha").value;
+      const erro = document.getElementById("Fumaciou");
+      
+       erro.innerHTML = "";
+
+      if (nome.trim() === "" || email.trim() === "") {
+        erro.innerHTML = "Tem que por nos dois campo cara(a)!";
+        return;
+      }
+      
+      if (!email.includes("@")) {
+        erro.innerHTML = "Tem coisa errada ai irmano!";
+        return;
+      }
+      if (!Senha !== "11") {
+        erro.innerHTML = "Não cara(a), tá errado cara(a)!";
+        return;
+      }
+      alert("Enviado, a chape vai avaliar seus dados!");
+    }
+    </script>
+  
+</body>
+</html>
